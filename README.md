@@ -1,5 +1,8 @@
 # YTC_Cosmetics_API
 
+### Wichtig
+Bitte guckt euch die Videos in der Reihenfolge an und überspringt keins. Zudem bringt euch das Kopieren des sources auch nicht viel, da ihr, um zu verstehen, wie es funktioniert, es einmal selber geschrieben haben solltet.
+
 ### Credits
 Der OOP PHP Router ist von BlackScorp (AKA Vitalij Mik)</br>
 YouTube: https://www.youtube.com/@VitalijMik</br>
