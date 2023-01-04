@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/controller/CosmeticsController.php";
+require_once __DIR__ . "/controller/SessionController.php";
 
 $container = [];
 
@@ -13,6 +14,10 @@ $container[MySQL::class] = function () {
 
 $container[CosmeticsController::class] = function () use ($container) {
     return new CosmeticsController($container[MySQL::class]());
+};
+
+$container[SessionController::class] = function () use ($container) {
+    return new SessionController($container[MySQL::class]());
 };
 
 $container[Router::class] = function () use ($container) {

@@ -60,12 +60,15 @@ final class Request
 
     public function get(string $name, mixed $default = null): mixed
     {
-        if (isset($this->queryParams[$name])) {
+        if (isset($this->queryParams[$name]))
             return $this->queryParams[$name];
-        }
-        if (filter_has_var(INPUT_POST, $name)) {
+
+        if (filter_has_var(INPUT_POST, $name))
             return filter_input(INPUT_POST, $name);
-        }
+
+        if (key_exists($name, $this->body['obj']))
+            return $this->body['obj'][$name];
+
         return $default;
     }
 
